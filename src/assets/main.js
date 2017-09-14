@@ -1,7 +1,8 @@
 $(function() {
 
   $.ajax({
-    url:'https://www.codeschool.com/users/shendoo.json', dataType: 'jsonp',
+    url:'https://www.codeschool.com/users/shendoo.json',
+    dataType: 'jsonp',
     success: function(response){
       addCourses(response.courses.completed);
     }
@@ -27,12 +28,6 @@ $(function() {
         src: course.badge
       }).appendTo($badges);
 
-      $('<a />',{
-        href: url,
-        target: _blank,
-        btn: btn btn-primary,
-        text: See Course
-      }).appendTo($badges);
     })
   }
 });
